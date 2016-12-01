@@ -1,0 +1,3 @@
+[submodule "wordclock-d-amend"]
+	path = wordclock_firmware
+	url = https://github.com/d-amend/wordclock_firmware.git
