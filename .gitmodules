@@ -1,3 +1,9 @@
 [submodule "wordclock-d-amend"]
 	path = wordclock_firmware
 	url = https://github.com/d-amend/wordclock_firmware.git
+
+[submodule "apa102-arduino"]
+	path = David/lib/apa102-arduino
+	url = https://github.com/pololu/apa102-arduino.git
+
+    
