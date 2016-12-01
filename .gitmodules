@@ -1,3 +1,0 @@
-[submodule "wordclock_firmware"]
-	path = wordclock_firmware
-	url = https://github.com/MartiniMoe/wordclock_firmware.git
