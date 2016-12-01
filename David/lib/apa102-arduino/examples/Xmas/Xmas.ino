@@ -22,8 +22,8 @@
 #include <APA102.h>
 #include <EEPROM.h>
 
-const uint8_t dataPin = 11;
-const uint8_t clockPin = 12;
+const uint8_t dataPin = 13;
+const uint8_t clockPin = 14;
 APA102<dataPin, clockPin> ledStrip;
 
 #define NEXT_PATTERN_BUTTON_PIN  2  // button between this pin and ground
@@ -33,7 +33,7 @@ APA102<dataPin, clockPin> ledStrip;
 // This takes 1527 bytes and uses up most of the 2KB RAM on an Uno,
 // so we should be very sparing with additional RAM use and keep
 // an eye out for possible stack overflow problems.
-#define LED_COUNT 509
+#define LED_COUNT 30
 rgb_color colors[LED_COUNT];
 
 // Set the brightness to use (the maximum is 31).

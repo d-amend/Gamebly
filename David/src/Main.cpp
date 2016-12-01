@@ -15,7 +15,7 @@ const uint8_t clockPin = 14;
 APA102<dataPin, clockPin> ledStrip;
 
 // Set the number of LEDs to control.
-const uint16_t ledCount = 30;
+const uint16_t ledCount = 60;
 
 // Create a buffer for holding the colors (3 bytes per color).
 rgb_color colors[ledCount];
@@ -33,10 +33,14 @@ const uint16_t lineCount = 6;   //Zeilenanzahl
 //turns all LEDs on (white)
 void turnAllOn()
 {
+
+
+
+
   ledStrip.startFrame();
   for(uint16_t i = 0; i < ledCount; i++)
   {
-    ledStrip.sendColor(255,255,255,1);
+    ledStrip.sendColor(255,255,230,1);
   }
   ledStrip.endFrame(ledCount);
 }
@@ -52,42 +56,10 @@ void turnAllOff()
   ledStrip.endFrame(ledCount);
 }
 
-//turns on a random LED in one line, line by line, beginning with the first
-void oneInLineByline()
-{
-  uint16_t minLed = 0;
-  uint16_t maxLed = columnCount;
-
-  for(uint16_t i = 0; i < lineCount; i++)
-  {
-    uint8_t ballPos = random(minLed, maxLed);
-    for(uint16_t j = 0; j < ledCount; j++)
-    {
-
-      if(j == ballPos)
-      {
-        colors[j].red = 50;
-        colors[j].green = 205;
-        colors[j].blue = 50;
-      }
-      else
-      {
-        colors[j].red = 0;
-        colors[j].green = 0;
-        colors[j].blue = 0;
-      }
-    }
-    ledStrip.write(colors, ledCount, brightness);
-    delay(500);
-    minLed = minLed + columnCount;
-    maxLed = maxLed + columnCount;
-  }
-}
-
 void loop()
 {
 
-
+//turnAllOn();
 }
 
 
