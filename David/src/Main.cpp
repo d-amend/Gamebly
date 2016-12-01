@@ -7,7 +7,6 @@
 // #define APA102_USE_FAST_GPIO
 
 #include <APA102.h>
-
 // Define which pins to use.
 const uint8_t dataPin = 13;
 const uint8_t clockPin = 14;
@@ -28,17 +27,8 @@ const uint16_t columnCount = 5; //Spaltenanzahl
 const uint16_t lineCount = 6;   //Zeilenanzahl
 
 
-void setup()
-{
-  turnAllOff();
-  turnAllOn();
-}
 
-void loop()
-{
-// oneInLineByline();
 
-}
 
 //turns all LEDs on (white)
 void turnAllOn()
@@ -92,4 +82,17 @@ void oneInLineByline()
     minLed = minLed + columnCount;
     maxLed = maxLed + columnCount;
   }
+}
+
+void loop()
+{
+
+
+}
+
+
+void setup()
+{
+  turnAllOff();
+  turnAllOn();
 }
